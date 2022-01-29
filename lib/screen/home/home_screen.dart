@@ -48,8 +48,8 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    height: 200,
-                    color: Colors.blue,
+                    width: 200,
+                    color: Colors.brown,
                   ),
                 );
               },
