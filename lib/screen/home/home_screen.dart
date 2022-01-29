@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
-import 'package:road_sign/models/list_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -51,8 +50,7 @@ class HomeScreen extends StatelessWidget {
             flex: 4,
             // it's category Random Item list.
             child: ListView.builder(
-              itemCount: items.length,
-              scrollDirection: Axis.vertical,
+              itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   child: Container(
@@ -65,6 +63,8 @@ class HomeScreen extends StatelessWidget {
                         height: 100,
                       ),
                     ),
+                    height: 200,
+                    color: Colors.red,
                   ),
                 );
               },
