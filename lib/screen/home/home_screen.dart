@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.yellow,
                   width: 200,
                   child: Text(categoris[index].categoryName),
                 ),
@@ -45,10 +45,11 @@ class HomeScreen extends StatelessWidget {
             flex: 4,
             // it's category Random Item list.
             child: ListView.builder(
+              itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    width: 200,
+                    height: 200,
                     color: Colors.red,
                   ),
                 );
