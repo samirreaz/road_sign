@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                 return Card(
                   child: Container(
                     width: 200,
-                    color: Colors.brown,
+                    color: Colors.red,
                   ),
                 );
               },
