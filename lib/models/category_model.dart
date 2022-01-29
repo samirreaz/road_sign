@@ -1,14 +1,14 @@
 class CategoryModel {
-  final String name;
-  final String img;
+  final String categoryName;
+  final String categoryImg;
 
-  CategoryModel({required this.name, required this.img});
+  CategoryModel({required this.categoryName, required this.categoryImg});
 }
 
 List<CategoryModel> categoris = [
-  CategoryModel(name: 'Light', img: 'img'),
-  CategoryModel(name: 'Arrow Sign', img: 'img'),
-  CategoryModel(name: 'Light', img: 'img'),
-  CategoryModel(name: 'Light', img: 'img'),
-  CategoryModel(name: 'Light', img: 'img'),
+  CategoryModel(categoryName: 'light', categoryImg: 'categoryImg'),
+  CategoryModel(categoryName: 'sign', categoryImg: 'categoryImg'),
+  CategoryModel(categoryName: 'Light', categoryImg: 'categoryImg'),
+  CategoryModel(categoryName: 'Light', categoryImg: 'categoryImg'),
+  CategoryModel(categoryName: 'Light', categoryImg: 'categoryImg'),
 ];

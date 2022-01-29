@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   color: Colors.white,
                   width: 200,
-                  child: Text(categoris[index].name),
+                  child: Text(categoris[index].categoryName),
                 ),
               ),
               separatorBuilder: (BuildContext context, int index) {
