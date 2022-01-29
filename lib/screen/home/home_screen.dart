@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
+import 'package:road_sign/models/list_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,7 +9,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Home Page'),
+        backgroundColor: Colors.orangeAccent,
+      ),
+      backgroundColor: Colors.purple,
       body: Column(
         children: [
           Expanded(
@@ -29,9 +34,10 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.green,
                   width: 200,
-                  child: Text(categoris[index].name),
+                  height: 10,
+                  child: Text(categoris[index].categoryName), //Text
                 ),
               ),
               separatorBuilder: (BuildContext context, int index) {
@@ -41,15 +47,24 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
-          Expanded(
+          Flexible(
             flex: 4,
             // it's category Random Item list.
             child: ListView.builder(
+              itemCount: items.length,
+              scrollDirection: Axis.vertical,
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    height: 200,
-                    color: Colors.green,
+                    height: 100,
+                    color: Colors.blue[50],
+                    child: Center(
+                      child: Container(
+                        child: Text(items[index].signName), //Text
+                        width: 100,
+                        height: 100,
+                      ),
+                    ),
                   ),
                 );
               },

@@ -30,10 +30,7 @@ class CategoryScreen extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.amber,
-      body: ListView.builder(
-          itemBuilder: (context, index) => ListTile(
-                title: Text('data'),
-              )),
+
     );
   }
 }
