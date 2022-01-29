@@ -15,6 +15,11 @@ class CategoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(selectedCategory.name),
       ),
+      backgroundColor: Colors.amber,
+      body: ListView.builder(
+          itemBuilder: (context, index) => ListTile(
+                title: Text('data'),
+              )),
     );
   }
 }

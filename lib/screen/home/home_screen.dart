@@ -8,7 +8,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Home Page'),
+        backgroundColor: Colors.orangeAccent,
+      ),
+      backgroundColor: Colors.purple[100],
       body: Column(
         children: [
           Expanded(
@@ -29,8 +33,9 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  color: Colors.white,
+                  color: Colors.green,
                   width: 200,
+                  height: 10,
                   child: Text(categoris[index].name),
                 ),
               ),
@@ -41,15 +46,19 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
-          Expanded(
-            flex: 4,
+          Flexible(
+            flex: 3,
             // it's category Random Item list.
             child: ListView.builder(
               itemBuilder: (BuildContext context, int index) {
                 return Card(
                   child: Container(
-                    width: 200,
-                    color: Colors.red,
+                    width: 50,
+                    height: 100,
+                    color: Colors.red[100],
+                    child: Center(
+                      child: Text('Demo'),
+                    ),
                   ),
                 );
               },
