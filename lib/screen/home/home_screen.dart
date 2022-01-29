@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                 return Card(
                   child: Container(
                     height: 100,
-                    color: Colors.blue[50],
+                    color: Colors.amberAccent,
                     child: Center(
                       child: Container(
                         child: Text(items[index].signName), //Text
