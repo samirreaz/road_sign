@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
+import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -33,39 +34,60 @@ class HomeScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  color: Colors.green,
                   width: 200,
                   height: 10,
-                  child: Text(categoris[index].categoryName), //Text
+                  child: Center(
+                    child: Text(
+                      categoris[index].categoryName,
+                      style: TextStyle(color: Colors.black, fontSize: 40),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  // Text
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(30),
+                      ),
+                      border: Border.all(color: Colors.black, width: 5),
+                      color: Colors.tealAccent,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.redAccent,
+                          blurRadius: 15.0,
+                          offset: Offset(3, 7.0),
+                        ),
+                      ]), //BoxDecoration
                 ),
               ),
               separatorBuilder: (BuildContext context, int index) {
                 return SizedBox(
-                  width: 10,
+                  width: 25,
                 );
               },
             ),
           ),
+          //Second Column Part
           Flexible(
             flex: 4,
             // it's category Random Item list.
             child: ListView.builder(
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  child: Container(
-                    height: 100,
-                    color: Colors.amberAccent,
-                    child: Center(
-                      child: Container(
-                        child: Text(items[index].signName), //Text
-                        width: 100,
-                        height: 100,
+                return Column(
+                  children: [
+                    Card(
+                        child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Container(
+                          height: 100,
+                          width: 350,
+                          color: Colors.amber[700],
+                          child: Text(items[index].itemName), //Text
+                        ),
                       ),
-                    ),
-                    height: 200,
-                    color: Colors.red,
-                  ),
+                    )),
+                  ],
                 );
               },
             ),

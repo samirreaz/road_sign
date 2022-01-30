@@ -1,25 +1,20 @@
 import 'package:flutter/cupertino.dart';
 
 class SignModel {
-  late String signName;
-  late String category;
-  late String itemImg;
+  final String signName;
+  final String category;
+  final String itemImg;
 
   SignModel({
     required this.signName,
     required this.category,
-
-    // })
+    required this.itemImg,
   });
 }
 
-late String signName;
-late String signCategory;
-late String itemImg;
-
-List<SignModel> items = [
-  SignModel(signName: ('Stops'), category: 'Signals'),
-  SignModel(signName: ('Lights and Signs'), category: 'Lights'),
-  SignModel(signName: ('Green Lights'), category: 'Traffic'),
-  SignModel(signName: ('Red Lights'), category: 'Signs')
+List<SignModel> Signitems = [
+  SignModel(signName: 'redlight', category: 'Signal', itemImg: 'itemImg'),
+  SignModel(signName: 'signName', category: 'category', itemImg: 'itemImg'),
+  SignModel(signName: 'signName', category: 'category', itemImg: 'itemImg'),
+  SignModel(signName: 'signName', category: 'category', itemImg: 'itemImg')
 ];

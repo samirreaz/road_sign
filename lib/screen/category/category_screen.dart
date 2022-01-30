@@ -30,7 +30,6 @@ class CategoryScreen extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.amber,
-
     );
   }
 }
