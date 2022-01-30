@@ -23,15 +23,11 @@ class CategoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(selectedCategory.categoryName),
       ),
-      body: Column(
-        children: [
-          ListView.builder(
-            itemCount: filterList.length,
-            itemBuilder: (context, index) => ListTile(
-              title: Text(filterList[index].itemName),
-            ),
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: filterList.length,
+        itemBuilder: (context, index) => ListTile(
+          title: Text(filterList[index].itemName),
+        ),
       ),
       backgroundColor: Colors.amber,
     );

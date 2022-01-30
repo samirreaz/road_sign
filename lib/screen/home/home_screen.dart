@@ -66,30 +66,55 @@ class HomeScreen extends StatelessWidget {
               },
             ),
           ),
+          const Divider(
+            color: Colors.grey,
+            height: 50,
+            thickness: 1,
+            indent: 20,
+            endIndent: 20,
+          ), //divider
+
           //Second Column Part
           Flexible(
             flex: 4,
             // it's category Random Item list.
-            child: ListView.builder(
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) {
-                return Column(
-                  children: [
-                    Card(
-                        child: Center(
-                      child: Padding(
-                        padding: EdgeInsets.all(5),
-                        child: Container(
-                          height: 100,
-                          width: 350,
-                          color: Colors.amber[700],
-                          child: Text(items[index].itemName), //Text
-                        ),
+            child: Center(
+              child: Container(
+                child: ListView.builder(
+                  itemCount: 10,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Center(
+                      child: Column(
+                        children: [
+                          Card(
+                            child: Center(
+                              child: Container(
+                                child: Text(
+                                  items[index].itemName,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 30),
+                                  textAlign: TextAlign.center,
+                                ), //Text
+                                height: 40,
+                                width: 400,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.all(
+                                      Radius.circular(29),
+                                    ),
+                                    color: Colors.blue[300],
+                                    gradient: LinearGradient(colors: [
+                                      Colors.cyan,
+                                      Colors.yellow
+                                    ])), //Decoration
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    )),
-                  ],
-                );
-              },
+                    );
+                  },
+                ),
+              ),
             ),
           ),
         ],
