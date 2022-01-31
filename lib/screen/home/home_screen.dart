@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
+import 'package:road_sign/models/quize.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -13,7 +14,8 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home Page'),
         backgroundColor: Colors.orangeAccent,
       ),
-      backgroundColor: Colors.purple,
+      backgroundColor: Colors.purple[100],
+      //body
       body: Column(
         children: [
           Expanded(
@@ -41,21 +43,21 @@ class HomeScreen extends StatelessWidget {
                       categoris[index].categoryName,
                       style: TextStyle(color: Colors.black, fontSize: 40),
                       textAlign: TextAlign.center,
-                    ),
+                    ), // Text
                   ),
-                  // Text
+
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(
                         Radius.circular(30),
                       ),
                       border: Border.all(color: Colors.black, width: 5),
-                      color: Colors.tealAccent,
+                      color: Colors.amber,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.redAccent,
-                          blurRadius: 15.0,
-                          offset: Offset(3, 7.0),
-                        ),
+                            color: Colors.redAccent,
+                            blurRadius: 15.0,
+                            offset: Offset(5, 1.0),
+                            spreadRadius: 5),
                       ]), //BoxDecoration
                 ),
               ),
@@ -68,8 +70,8 @@ class HomeScreen extends StatelessWidget {
           ),
           const Divider(
             color: Colors.grey,
-            height: 50,
-            thickness: 1,
+            height: 30,
+            thickness: 2,
             indent: 20,
             endIndent: 20,
           ), //divider
@@ -81,7 +83,7 @@ class HomeScreen extends StatelessWidget {
             child: Center(
               child: Container(
                 child: ListView.builder(
-                  itemCount: 10,
+                  itemCount: items.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Center(
                       child: Column(
@@ -90,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                             child: Center(
                               child: Container(
                                 child: Text(
-                                  items[index].itemName,
+                                  Quizee[index].Questions,
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 30),
                                   textAlign: TextAlign.center,
@@ -98,14 +100,13 @@ class HomeScreen extends StatelessWidget {
                                 height: 40,
                                 width: 400,
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(29),
-                                    ),
-                                    color: Colors.blue[300],
-                                    gradient: LinearGradient(colors: [
-                                      Colors.cyan,
-                                      Colors.yellow
-                                    ])), //Decoration
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(15),
+                                  ),
+                                  color: Colors.blue[300],
+                                  gradient: LinearGradient(
+                                      colors: [Colors.yellow, Colors.blue]),
+                                ), //Decoration
                               ),
                             ),
                           ),
