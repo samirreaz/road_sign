@@ -29,7 +29,7 @@ class CategoryScreen extends StatelessWidget {
           title: Text(filterList[index].itemName),
         ),
       ),
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.purple[100],
     );
   }
 }

@@ -12,5 +12,5 @@ List<CategoryModel> categoris = [
   CategoryModel(categoryName: 'Road Symbols', categoryImg: 'categoryImg'),
   CategoryModel(categoryName: 'Signals', categoryImg: 'categoryImg'),
   CategoryModel(categoryName: 'Boards', categoryImg: 'categoryImg'),
-  // CategoryModel(categoryName: 'Notice', categoryImg: 'categoryImg'),
+  CategoryModel(categoryName: 'Notice', categoryImg: 'categoryImg'),
 ];
