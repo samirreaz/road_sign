@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/item_model.dart';
+import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
-import 'package:road_sign/models/quize.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,9 +12,9 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.black,
       ),
-      backgroundColor: Colors.purple[100],
+      backgroundColor: Colors.black45,
       //body
       body: Column(
         children: [
@@ -37,11 +37,10 @@ class HomeScreen extends StatelessWidget {
                 },
                 child: Container(
                   width: 200,
-                  height: 10,
                   child: Center(
                     child: Text(
                       categoris[index].categoryName,
-                      style: TextStyle(color: Colors.black, fontSize: 40),
+                      style: TextStyle(color: Colors.white, fontSize: 40),
                       textAlign: TextAlign.center,
                     ), // Text
                   ),
@@ -51,13 +50,13 @@ class HomeScreen extends StatelessWidget {
                         Radius.circular(30),
                       ),
                       border: Border.all(color: Colors.black, width: 5),
-                      color: Colors.amber,
+                      color: Colors.red[400],
                       boxShadow: [
                         BoxShadow(
-                            color: Colors.redAccent,
-                            blurRadius: 15.0,
+                            color: Colors.white,
+                            blurRadius: 5.0,
                             offset: Offset(5, 1.0),
-                            spreadRadius: 5),
+                            spreadRadius: 0.5),
                       ]), //BoxDecoration
                 ),
               ),
@@ -83,30 +82,32 @@ class HomeScreen extends StatelessWidget {
             child: Center(
               child: Container(
                 child: ListView.builder(
-                  itemCount: items.length,
+                  itemCount: quizeList.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Center(
                       child: Column(
                         children: [
                           Card(
+                            elevation: 10,
+                            color: Colors.transparent,
                             child: Center(
                               child: Container(
                                 child: Text(
-                                  Quizee[index].Questions,
+                                  quizeList[index].question,
                                   style: TextStyle(
                                       color: Colors.black, fontSize: 30),
                                   textAlign: TextAlign.center,
                                 ), //Text
                                 height: 40,
-                                width: 400,
+                                width: 1000,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(15),
                                   ),
                                   color: Colors.blue[300],
                                   gradient: LinearGradient(
-                                      colors: [Colors.yellow, Colors.blue]),
-                                ), //Decoration
+                                      colors: [Colors.red, Colors.redAccent]),
+                                ),
                               ),
                             ),
                           ),
