@@ -12,59 +12,91 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Page'),
-        backgroundColor: Colors.black,
+        //backgroundColor: Colors.black,
       ),
-      backgroundColor: Colors.black87,
+      //backgroundColor: Colors.black87,
       //!bodyb
       body: Column(
         children: [
           Expanded(
             flex: 2,
             //! it's category List
-            child: ListView.separated(
-              itemCount: categoris.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => CategoryScreen(
-                        selectedCategory: categoris[index],
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListView.separated(
+                itemCount: categoris.length,
+                scrollDirection: Axis.horizontal,
+                /*itemBuilder: (context, index) => InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CategoryScreen(
+                          selectedCategory: categoris[index],
+                        ),
                       ),
-                    ),
+                    );
+                  },
+                  child: Container(
+                    width: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: NetworkImage(categoris[index].categoryImg),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30),
+                        ),
+                        border: Border.all(color: Colors.black, width: 5),
+                        color: Colors.red[400],
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.white,
+                              blurRadius: 5.0,
+                              offset: Offset(5, 1.0),
+                              spreadRadius: 2.5),
+                        ]),
+                    child: Stack(
+                      children: [
+                        Text(
+                          categoris[index].categoryName,
+                          style: TextStyle(color: Colors.white, fontSize: 40),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ), //!BoxDecoration
+                  ),
+                ),*/
+
+                itemBuilder: (context, index) => GridTile(
+                  child: Container(
+                    margin: EdgeInsets.all(5),
+                    height: 100,
+                    width: 200,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(categoris[index].categoryImg),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 2,
+                            spreadRadius: 3,
+                            offset: Offset(
+                              3.0, // Move to right 10  horizontally
+                              2.0, // Move to bottom 10 Vertically
+                            ),
+                          )
+                        ]),
+                  ),
+                ),
+                separatorBuilder: (BuildContext context, int index) {
+                  return SizedBox(
+                    width: 25,
                   );
                 },
-                child: Container(
-                  width: 200,
-                  child: Center(
-                    child: Text(
-                      categoris[index].categoryName,
-                      style: TextStyle(color: Colors.white, fontSize: 40),
-                      textAlign: TextAlign.center,
-                    ), // Text
-                  ),
-
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30),
-                      ),
-                      border: Border.all(color: Colors.black, width: 5),
-                      color: Colors.red[400],
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.white,
-                            blurRadius: 5.0,
-                            offset: Offset(5, 1.0),
-                            spreadRadius: 2.5),
-                      ]), //!BoxDecoration
-                ),
               ),
-              separatorBuilder: (BuildContext context, int index) {
-                return SizedBox(
-                  width: 25,
-                );
-              },
             ),
           ),
           const Divider(
@@ -80,47 +112,32 @@ class HomeScreen extends StatelessWidget {
           Flexible(
             flex: 4,
             //! it's category Random Item list.
-            child: Center(
-              child: Container(
-                child: ListView.builder(
-                  itemCount: quizeList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Center(
-                      child: Column(
-                        children: [
-                          Card(
-                            elevation: 0,
-                            color: Colors.transparent,
-                            child: Center(
-                              child: Container(
-                                child: Text(
-                                  quizeList[index].question,
-                                  style: TextStyle(
-                                      color: Colors.black, fontSize: 35),
-                                  textAlign: TextAlign.center,
-                                ), //*Text
-
-                                height: 40,
-                                width: 1000,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(15),
-                                  ),
-                                  color: Colors.blue[300],
-                                  gradient: LinearGradient(colors: [
-                                    Colors.yellowAccent,
-                                    Colors.redAccent
-                                  ]),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
+            child: ListView.separated(
+              itemCount: quizeList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Container(
+                  color: Colors.green,
+                  height: 200,
+                  child: Column(
+                    children: [
+                      Flexible(
+                        child: Image(
+                          image: NetworkImage(
+                              'https://images.hindustantimes.com/img/2021/10/06/1600x900/08065ecc-26df-11ec-97ad-def1feb12b09_1633550216966.jpg'),
+                        ),
                       ),
-                    );
-                  },
-                ),
-              ),
+                      Text(
+                        "According to the guidelines issued by the ministry, each Good Samaritan would also receive a certificate of appreciation besides ₹5,000 in cash for saving a road accident victim",
+                      ),
+                    ],
+                  ),
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return SizedBox(
+                  height: 10,
+                );
+              },
             ),
           ),
         ],
