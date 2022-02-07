@@ -22,6 +22,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(selectedCategory.categoryName),
+        backgroundColor: Colors.black87,
       ),
       body: ListView.builder(
         itemCount: filterList.length,

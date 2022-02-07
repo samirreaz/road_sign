@@ -16,7 +16,16 @@ List<CategoryModel> categoris = [
       categoryName: 'Road Symbols',
       categoryImg:
           'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
-  CategoryModel(categoryName: 'Signals', categoryImg: 'categoryImg'),
-  CategoryModel(categoryName: 'Boards', categoryImg: 'categoryImg'),
-  CategoryModel(categoryName: 'Notice', categoryImg: 'categoryImg'),
+  CategoryModel(
+      categoryName: 'Signals',
+      categoryImg:
+          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
+  CategoryModel(
+      categoryName: 'Boards',
+      categoryImg:
+          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
+  CategoryModel(
+      categoryName: 'Notice',
+      categoryImg:
+          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
 ];
