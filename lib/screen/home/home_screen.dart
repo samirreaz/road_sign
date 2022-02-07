@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('Home Page'),
         backgroundColor: Colors.black,
       ),
-      backgroundColor: Colors.black45,
+      backgroundColor: Colors.black87,
       //!bodyb
       body: Column(
         children: [

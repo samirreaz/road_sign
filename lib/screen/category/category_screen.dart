@@ -26,10 +26,13 @@ class CategoryScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: filterList.length,
         itemBuilder: (context, index) => ListTile(
-          title: Text(filterList[index].itemName, style: TextStyle(color: Colors.white60, fontSize: 25),),
+          title: Text(
+            filterList[index].itemName,
+            style: TextStyle(color: Colors.white, fontSize: 25),
+          ),
         ),
       ),
-      backgroundColor: Colors.black26,
+      backgroundColor: Colors.black87,
     );
   }
 }
