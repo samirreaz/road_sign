@@ -15,12 +15,12 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.black45,
-      //body
+      //!bodyb
       body: Column(
         children: [
           Expanded(
             flex: 2,
-            // it's category List
+            //! it's category List
             child: ListView.separated(
               itemCount: categoris.length,
               scrollDirection: Axis.horizontal,
@@ -56,8 +56,8 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.white,
                             blurRadius: 5.0,
                             offset: Offset(5, 1.0),
-                            spreadRadius: 0.5),
-                      ]), //BoxDecoration
+                            spreadRadius: 2.5),
+                      ]), //!BoxDecoration
                 ),
               ),
               separatorBuilder: (BuildContext context, int index) {
@@ -73,12 +73,13 @@ class HomeScreen extends StatelessWidget {
             thickness: 2,
             indent: 20,
             endIndent: 20,
-          ), //divider
+          ), //!divider
 
-          //Second Column Part
+          //*Second Column Part
+
           Flexible(
             flex: 4,
-            // it's category Random Item list.
+            //! it's category Random Item list.
             child: Center(
               child: Container(
                 child: ListView.builder(
@@ -88,16 +89,17 @@ class HomeScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           Card(
-                            elevation: 10,
+                            elevation: 0,
                             color: Colors.transparent,
                             child: Center(
                               child: Container(
                                 child: Text(
                                   quizeList[index].question,
                                   style: TextStyle(
-                                      color: Colors.black, fontSize: 30),
+                                      color: Colors.black, fontSize: 35),
                                   textAlign: TextAlign.center,
-                                ), //Text
+                                ), //*Text
+
                                 height: 40,
                                 width: 1000,
                                 decoration: BoxDecoration(
@@ -105,8 +107,10 @@ class HomeScreen extends StatelessWidget {
                                     Radius.circular(15),
                                   ),
                                   color: Colors.blue[300],
-                                  gradient: LinearGradient(
-                                      colors: [Colors.red, Colors.redAccent]),
+                                  gradient: LinearGradient(colors: [
+                                    Colors.yellowAccent,
+                                    Colors.redAccent
+                                  ]),
                                 ),
                               ),
                             ),
