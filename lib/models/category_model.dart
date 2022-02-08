@@ -9,46 +9,23 @@ class CategoryModel {
 
 List<CategoryModel> categoris = [
   CategoryModel(
-    categoryName: 'Light',
+    categoryName: ' Traffic Lights',
     categoryImg:
         'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
   ),
   CategoryModel(
-<<<<<<< HEAD
-      categoryName: 'Road Symbols',
-      categoryImg:
-          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
-  CategoryModel(
-      categoryName: 'Signals',
-      categoryImg:
-          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
-  CategoryModel(
-      categoryName: 'Boards',
-      categoryImg:
-          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
-  CategoryModel(
-      categoryName: 'Notice',
-      categoryImg:
-          'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ='),
-=======
     categoryName: 'Road Symbols',
     categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+        'https://png.vector.me/files/images/1/5/158725/road_signs_traffic_light.jpg',
   ),
   CategoryModel(
-    categoryName: 'Signals',
+    categoryName: 'Traffic Signals',
     categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
-  ),
-  CategoryModel(
-    categoryName: 'Boards',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51aNQXobMwYk9wZ4rZnecr0AASclMeQP57g&usqp=CAU',
   ),
   CategoryModel(
     categoryName: 'Notice',
     categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+        'https://images.clipartlogo.com/files/images/36/367995/road-traffic-signs-clip-art_p.jpg',
   ),
->>>>>>> b7cac7c71850c0eee20c853844b1e2493b0455f7
 ];

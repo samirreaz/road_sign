@@ -26,6 +26,7 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: categoris.length,
                 scrollDirection: Axis.horizontal,
+
                 /*itemBuilder: (context, index) => InkWell(
                   onTap: () {
                     Navigator.push(
@@ -96,33 +97,6 @@ class HomeScreen extends StatelessWidget {
                     width: 25,
                   );
                 },
-<<<<<<< HEAD
-                child: Container(
-                  width: 200,
-                  child: Center(
-                    child: Text(
-                      categoris[index].categoryName,
-                      style: TextStyle(color: Colors.white, fontSize: 40),
-                      textAlign: TextAlign.center,
-                    ), // Text
-                  ),
-
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(30),
-                      ),
-                      border: Border.all(color: Colors.black, width: 5),
-                      color: Colors.red,
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.white,
-                            blurRadius: 5.0,
-                            offset: Offset(5, 1.0),
-                            spreadRadius: 2.5),
-                      ]), //!BoxDecoration
-                ),
-=======
->>>>>>> b7cac7c71850c0eee20c853844b1e2493b0455f7
               ),
             ),
           ),
@@ -143,8 +117,8 @@ class HomeScreen extends StatelessWidget {
               itemCount: quizeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  color: Colors.green,
-                  height: 200,
+                  color: Colors.green[100],
+                  height: 500,
                   child: Column(
                     children: [
                       Flexible(
