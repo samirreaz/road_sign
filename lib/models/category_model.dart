@@ -11,7 +11,7 @@ List<CategoryModel> categoris = [
   CategoryModel(
     categoryName: ' Traffic Lights',
     categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6Y4lbVxphIqkvHZz0rZcgoZgV1gtqi7j-g&usqp=CAU',
   ),
   CategoryModel(
     categoryName: 'Road Symbols',
