@@ -3,6 +3,7 @@ import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
+import 'package:road_sign/screen/category_item/category_item_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -69,27 +70,39 @@ class HomeScreen extends StatelessWidget {
                 ),*/
 
                 itemBuilder: (context, index) => GridTile(
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    height: 100,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(categoris[index].categoryImg),
-                          fit: BoxFit.cover,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoryScreen(
+                            selectedCategory: categoris[index],
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black38,
-                            blurRadius: 2,
-                            spreadRadius: 3,
-                            offset: Offset(
-                              3.0, // Move to right 10  horizontally
-                              2.0, // Move to bottom 10 Vertically
-                            ),
-                          )
-                        ]),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(categoris[index].categoryImg),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 2,
+                              spreadRadius: 3,
+                              offset: Offset(
+                                3.0, // Move to right 10  horizontally
+                                2.0, // Move to bottom 10 Vertically
+                              ),
+                            )
+                          ]),
+                    ),
                   ),
                 ),
                 separatorBuilder: (BuildContext context, int index) {
