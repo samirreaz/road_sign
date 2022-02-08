@@ -9,23 +9,19 @@ class CategoryModel {
 
 List<CategoryModel> categoris = [
   CategoryModel(
-    categoryName: ' Traffic Lights',
-    categoryImg:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6Y4lbVxphIqkvHZz0rZcgoZgV1gtqi7j-g&usqp=CAU',
+    categoryName: 'Traffic Lights',
+    categoryImg: 'assets/images/traffic-light-gdcf636228_640.jpg',
   ),
   CategoryModel(
     categoryName: 'Road Symbols',
-    categoryImg:
-        'https://png.vector.me/files/images/1/5/158725/road_signs_traffic_light.jpg',
+    categoryImg: 'assets/images/pexels-caleb-oquendo-3162065.jpg',
   ),
   CategoryModel(
     categoryName: 'Traffic Signals',
-    categoryImg:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR51aNQXobMwYk9wZ4rZnecr0AASclMeQP57g&usqp=CAU',
+    categoryImg: 'assets/images/tarffic signals.png',
   ),
   CategoryModel(
     categoryName: 'Notice',
-    categoryImg:
-        'https://images.clipartlogo.com/files/images/36/367995/road-traffic-signs-clip-art_p.jpg',
+    categoryImg: 'assets/images/board signals.jpg',
   ),
 ];

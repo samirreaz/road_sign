@@ -3,7 +3,7 @@ import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
-import 'package:road_sign/screen/category_item/category_item_screen.dart';
+// import 'package:road_sign/screen/category_item/category_item_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -27,48 +27,6 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: categoris.length,
                 scrollDirection: Axis.horizontal,
-
-                /*itemBuilder: (context, index) => InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CategoryScreen(
-                          selectedCategory: categoris[index],
-                        ),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(categoris[index].categoryImg),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(30),
-                        ),
-                        border: Border.all(color: Colors.black, width: 5),
-                        color: Colors.red[400],
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 5.0,
-                              offset: Offset(5, 1.0),
-                              spreadRadius: 2.5),
-                        ]),
-                    child: Stack(
-                      children: [
-                        Text(
-                          categoris[index].categoryName,
-                          style: TextStyle(color: Colors.white, fontSize: 40),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ), //!BoxDecoration
-                  ),
-                ),*/
-
                 itemBuilder: (context, index) => GridTile(
                   child: InkWell(
                     onTap: () {
