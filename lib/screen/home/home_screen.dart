@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   color: Colors.green[100],
-                  height: 500,
+                  height: 200,
                   child: Column(
                     children: [
                       Flexible(
