@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class CategoryModel {
   final String categoryName;
@@ -9,28 +8,19 @@ class CategoryModel {
 
 List<CategoryModel> categoris = [
   CategoryModel(
-    categoryName: 'Light',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+    categoryName: 'Traffic Lights',
+    categoryImg: 'assets/images/all_lights.png',
   ),
   CategoryModel(
     categoryName: 'Road Symbols',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+    categoryImg: 'assets/images/traffic_stops.png',
   ),
   CategoryModel(
-    categoryName: 'Signals',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
-  ),
-  CategoryModel(
-    categoryName: 'Boards',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+    categoryName: 'Traffic Signals',
+    categoryImg: 'assets/images/tarffic signals.png',
   ),
   CategoryModel(
     categoryName: 'Notice',
-    categoryImg:
-        'https://media.istockphoto.com/photos/traffic-light-on-street-with-red-signal-lit-up-picture-id92272747?k=20&m=92272747&s=612x612&w=0&h=xWVz0OMb25IqDyM8J_R_zmFa1EOQo5vOWp8nm3cyWBQ=',
+    categoryImg: 'assets/images/road_blocked.jpg',
   ),
 ];

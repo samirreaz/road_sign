@@ -9,11 +9,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('The Home Page'),
         //backgroundColor: Colors.black,
       ),
       //backgroundColor: Colors.black87,
-      //!bodyb
+      //!body
       body: Column(
         children: [
           Expanded(
@@ -24,69 +24,40 @@ class HomeScreen extends StatelessWidget {
               child: ListView.separated(
                 itemCount: categoris.length,
                 scrollDirection: Axis.horizontal,
-                /*itemBuilder: (context, index) => InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CategoryScreen(
-                          selectedCategory: categoris[index],
-                        ),
-                      ),
-                    );
-                  },
-                  child: Container(
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(categoris[index].categoryImg),
-                            fit: BoxFit.cover),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(30),
-                        ),
-                        border: Border.all(color: Colors.black, width: 5),
-                        color: Colors.red[400],
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.white,
-                              blurRadius: 5.0,
-                              offset: Offset(5, 1.0),
-                              spreadRadius: 2.5),
-                        ]),
-                    child: Stack(
-                      children: [
-                        Text(
-                          categoris[index].categoryName,
-                          style: TextStyle(color: Colors.white, fontSize: 40),
-                          textAlign: TextAlign.center,
-                        ),
-                      ],
-                    ), //!BoxDecoration
-                  ),
-                ),*/
-
                 itemBuilder: (context, index) => GridTile(
-                  child: Container(
-                    margin: EdgeInsets.all(5),
-                    height: 100,
-                    width: 200,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: NetworkImage(categoris[index].categoryImg),
-                          fit: BoxFit.cover,
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CategoryScreen(
+                            selectedCategory: categoris[index],
+                          ),
                         ),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black38,
-                            blurRadius: 2,
-                            spreadRadius: 3,
-                            offset: Offset(
-                              3.0, // Move to right 10  horizontally
-                              2.0, // Move to bottom 10 Vertically
-                            ),
-                          )
-                        ]),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(categoris[index].categoryImg),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black38,
+                              blurRadius: 2,
+                              spreadRadius: 3,
+                              offset: Offset(
+                                3.0, // Move to right 10  horizontally
+                                2.0, // Move to bottom 10 Vertically
+                              ),
+                            )
+                          ]),
+                    ),
                   ),
                 ),
                 separatorBuilder: (BuildContext context, int index) {
@@ -97,13 +68,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Divider(
-            color: Colors.grey,
-            height: 30,
-            thickness: 2,
-            indent: 20,
-            endIndent: 20,
-          ), //!divider
+          //!divider
 
           //*Second Column Part
 
@@ -114,7 +79,7 @@ class HomeScreen extends StatelessWidget {
               itemCount: quizeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  color: Colors.green,
+                  color: Colors.white10,
                   height: 200,
                   child: Column(
                     children: [
@@ -125,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "According to the guidelines issued by the ministry, each Good Samaritan would also receive a certificate of appreciation besides ₹5,000 in cash for saving a road accident victim",
+                        "For 2016 specifically, National Highway Traffic Safety Administration (NHTSA) data shows 37,461 people were killed in 34,436 motor vehicle crashes, an average of 102 per day.",
                       ),
                     ],
                   ),
