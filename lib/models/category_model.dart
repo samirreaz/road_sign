@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 
 class CategoryModel {
   final String categoryName;
@@ -10,11 +9,11 @@ class CategoryModel {
 List<CategoryModel> categoris = [
   CategoryModel(
     categoryName: 'Traffic Lights',
-    categoryImg: 'assets/images/traffic-light-gdcf636228_640.jpg',
+    categoryImg: 'assets/images/all_lights.png',
   ),
   CategoryModel(
     categoryName: 'Road Symbols',
-    categoryImg: 'assets/images/pexels-caleb-oquendo-3162065.jpg',
+    categoryImg: 'assets/images/traffic_stops.png',
   ),
   CategoryModel(
     categoryName: 'Traffic Signals',
@@ -22,6 +21,6 @@ List<CategoryModel> categoris = [
   ),
   CategoryModel(
     categoryName: 'Notice',
-    categoryImg: 'assets/images/board signals.jpg',
+    categoryImg: 'assets/images/road_blocked.jpg',
   ),
 ];

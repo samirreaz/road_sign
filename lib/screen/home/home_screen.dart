@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
-import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
-// import 'package:road_sign/screen/category_item/category_item_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,11 +10,11 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('The Home Page'),
         //backgroundColor: Colors.black,
       ),
       //backgroundColor: Colors.black87,
-      //!bodyb
+      //!body
       body: Column(
         children: [
           Expanded(
@@ -71,13 +69,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          const Divider(
-            color: Colors.grey,
-            height: 30,
-            thickness: 2,
-            indent: 20,
-            endIndent: 20,
-          ), //!divider
+          //!divider
 
           //*Second Column Part
 
@@ -88,7 +80,7 @@ class HomeScreen extends StatelessWidget {
               itemCount: quizeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  color: Colors.green[100],
+                  color: Colors.white10,
                   height: 200,
                   child: Column(
                     children: [
@@ -99,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "According to the guidelines issued by the ministry, each Good Samaritan would also receive a certificate of appreciation besides ₹5,000 in cash for saving a road accident victim",
+                        "For 2016 specifically, National Highway Traffic Safety Administration (NHTSA) data shows 37,461 people were killed in 34,436 motor vehicle crashes, an average of 102 per day.",
                       ),
                     ],
                   ),
