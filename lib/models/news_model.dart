@@ -14,7 +14,7 @@ class NewsModel {
 
 List<NewsModel> news_list = [
   NewsModel(
-    newsTitle: 'newsTitle',
+    newsTitle: 'Hey taxi',
     newsDetails: 'newsDetails',
     newsImg: 'newsImg',
   ),

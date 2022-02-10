@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
+import 'package:road_sign/models/news_model.dart';
 import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
 
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         title: Text('The Home Page'),
         //backgroundColor: Colors.black,
       ),
-      //backgroundColor: Colors.black87,
+      backgroundColor: Colors.white,
       //!body
       body: Column(
         children: [
@@ -69,15 +70,14 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
-          //!divider
 
-          //*Second Column Part
+          //!Second Column Part
 
           Flexible(
             flex: 4,
             //! it's category Random Item list.
             child: ListView.separated(
-              itemCount: quizeList.length,
+              itemCount: news_list.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   height: 200,
