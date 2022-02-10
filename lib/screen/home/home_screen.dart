@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
-import 'package:road_sign/models/item_model.dart';
 import 'package:road_sign/models/quize_model.dart';
-import 'package:road_sign/screen/category/category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
