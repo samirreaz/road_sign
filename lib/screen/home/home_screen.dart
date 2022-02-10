@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/quize_model.dart';
+import 'package:road_sign/screen/category/category_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                       width: 200,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                            image: NetworkImage(categoris[index].categoryImg),
+                            image: AssetImage(categoris[index].categoryImg),
                             fit: BoxFit.cover,
                           ),
                           borderRadius: BorderRadius.circular(20),

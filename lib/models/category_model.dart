@@ -1,4 +1,3 @@
-
 class CategoryModel {
   final String categoryName;
   final String categoryImg;
