@@ -80,20 +80,26 @@ class HomeScreen extends StatelessWidget {
               itemCount: quizeList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  color: Colors.white10,
                   height: 200,
-                  child: Column(
-                    children: [
-                      Flexible(
-                        child: Image(
-                          image: NetworkImage(
-                              'https://images.hindustantimes.com/img/2021/10/06/1600x900/08065ecc-26df-11ec-97ad-def1feb12b09_1633550216966.jpg'),
+                  decoration: BoxDecoration(
+                      color: Colors.white10,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Image(
+                            image: NetworkImage(
+                                'https://images.hindustantimes.com/img/2021/10/06/1600x900/08065ecc-26df-11ec-97ad-def1feb12b09_1633550216966.jpg'),
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "For 2016 specifically, National Highway Traffic Safety Administration (NHTSA) data shows 37,461 people were killed in 34,436 motor vehicle crashes, an average of 102 per day.",
-                      ),
-                    ],
+                        Text(
+                          "For 2016 specifically, National Highway Traffic Safety Administration (NHTSA) data shows 37,461 people were killed in 34,436 motor vehicle crashes, an average of 102 per day.",
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
