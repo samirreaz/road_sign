@@ -7,20 +7,23 @@ class CategoryModel {
 
 List<CategoryModel> categoris = [
   CategoryModel(
-    categoryName: 'Traffic Lights',
-    categoryImg: 'assets/images/all_lights.png',
+    categoryName: 'Types of Vehicles',
+    categoryImg: 'assets/images/deposicar_types.jpg',
   ),
   CategoryModel(
-    categoryName: 'Types of Car',
+    categoryName: 'Traffic Lights',
+    categoryImg: 'assets/images/allLights.jpg',
+  ),
+  CategoryModel(
     categoryName: 'Road Symbols',
-    categoryImg: 'assets/images/traffic_stops.png',
+    categoryImg: 'assets/images/',
   ),
   CategoryModel(
     categoryName: 'Traffic Signals',
-    categoryImg: 'assets/images/tarffic signals.png',
+    categoryImg: 'assets/images/',
   ),
   CategoryModel(
     categoryName: 'Notice',
-    categoryImg: 'assets/images/road_blocked.jpg',
+    categoryImg: 'assets/images/',
   ),
 ];

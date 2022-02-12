@@ -58,4 +58,37 @@ List<ItemModel> items = [
       itemName: 'No Right Turn',
       category: 'Road Symbols',
       itemImg: 'assets/images/no_right_turn.png'),
+//!Types of Cars
+  ItemModel(
+      itemName: 'Sedan',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/seadn.png'),
+  ItemModel(
+      itemName: 'Coupe',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/coupe.png'),
+  ItemModel(
+      itemName: 'Convertible',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/convertible.jpg'),
+  ItemModel(
+      itemName: 'Sports Car',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/fersports_car.png'),
+  ItemModel(
+      itemName: 'Hatchback',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/hatchback.png'),
+  ItemModel(
+      itemName: 'Mini-Ban',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/miniban.jpg'),
+  ItemModel(
+      itemName: 'Pick_Up Truck',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/pickup_truck.jpg'),
+  ItemModel(
+      itemName: 'Station Wagon',
+      category: 'Types of Vehicles',
+      itemImg: 'assets/images/station_wagon.png'),
 ];
