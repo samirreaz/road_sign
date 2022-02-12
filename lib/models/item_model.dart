@@ -13,6 +13,7 @@ class ItemModel {
 }
 
 List<ItemModel> items = [
+  //!TrafficLights
   ItemModel(
       itemName: 'Green Light',
       category: 'Traffic Lights',
@@ -24,41 +25,49 @@ List<ItemModel> items = [
   ItemModel(
       itemName: 'Yellow Light',
       category: 'Traffic Lights',
-      itemImg: 'assets/images/yellow_light.png'), //! DOne
+      itemImg: 'assets/images/yellow_light.png'),
 
+//!Road Symbols
   ItemModel(
       itemName: 'U-Turn',
       category: 'Road Symbols',
       itemImg: 'assets/images/u_turn.png'),
   ItemModel(
-      itemName: 'Turn Right ahead',
+      itemName: 'No Right Turn',
       category: 'Road Symbols',
-      itemImg: 'assets/images/turn_right.png'),
-  ItemModel(
-      itemName: 'Road Works',
-      category: 'Traffic Signals',
-      itemImg: 'assets/images/road_works.png'),
-  ItemModel(
-      itemName: 'Traffic Stops',
-      category: 'Traffic Signals',
-      itemImg: 'assets/images/traffic_stops.png'),
-  ItemModel(
-      itemName: 'Road is Blocked',
-      category: 'Notice',
-      itemImg: 'assets/images/road_blocked.png'),
-  ItemModel(
-      itemName: 'Speed Limit',
-      category: 'Notice',
-      itemImg: 'assets/images/speed_limit.png'),
+      itemImg: 'assets/images/no_right_turn.png'),
+
   ItemModel(
       itemName: 'No Left Turn',
       category: 'Road Symbols',
       itemImg: 'assets/images/no_left_turn.png'),
   ItemModel(
-      itemName: 'No Right Turn',
+      itemName: 'Turn Right ahead',
       category: 'Road Symbols',
-      itemImg: 'assets/images/no_right_turn.png'),
-//!Types of Cars
+      itemImg: 'assets/images/turn_right.png'),
+  //?Road Symbols
+  //! Important Road Signs
+  ItemModel(
+      itemName: 'Road Works',
+      category: 'Important Road Signs',
+      itemImg: 'assets/images/road_works.png'),
+  ItemModel(
+      itemName: 'Traffic Stops',
+      category: 'Important Road Signs',
+      itemImg: 'assets/images/traffic_stops.png'),
+  //? Important road signs
+  //!Road signals and Safety
+  ItemModel(
+      itemName: 'Road is Blocked',
+      category: 'Road signals and Safety',
+      itemImg: 'assets/images/road_blocked.png'),
+  ItemModel(
+      itemName: 'Speed Limit',
+      category: 'Road signals and Safety',
+      itemImg: 'assets/images/speed_limit.png'),
+  //? Road signals and Safety
+
+//!Types of Vehicles
   ItemModel(
       itemName: 'Sedan',
       category: 'Types of Vehicles',

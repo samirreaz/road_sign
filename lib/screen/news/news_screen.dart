@@ -21,10 +21,15 @@ class NewsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image(image: AssetImage(news.newsImg)),
-            Text(
-              news.newsDetails,
-              style: TextStyle(fontSize: 22),
+            Image(
+              image: AssetImage(news.newsImg),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Text(
+                news.newsDetails,
+                style: TextStyle(fontSize: 20),
+              ),
             ),
           ],
         ),

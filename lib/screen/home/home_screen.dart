@@ -80,7 +80,7 @@ class NewsListWidget extends StatelessWidget {
                         ),
                         image: DecorationImage(
                             image: AssetImage(news_list[index].newsImg),
-                            fit: BoxFit.cover)),
+                            fit: BoxFit.fitWidth)),
                     width: double.maxFinite,
                   ),
                 ),
@@ -92,14 +92,14 @@ class NewsListWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'News Title',
+                          news_list[index].newsTitle,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
                         ),
                         Text(
-                          "For 2016 specifically, National Highway Traffic Safety Administration (NHTSA) data shows 37,461 people were killed in 34,436 motor vehicle crashes, an average of 102 per day.",
+                          news_list[index].newsDetails,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -175,17 +175,22 @@ class CategoryWidget extends StatelessWidget {
                   Column(mainAxisAlignment: MainAxisAlignment.end, children: [
                 SizedBox(
                   width: 200.0,
-                  height: 25.0,
+                  height: 22.0,
                   child: Container(
                     width: 200,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                      ),
                       color: Colors.grey[300],
                     ),
                     child: Text(
                       categoris[index].categoryName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 21, color: Colors.black),
+                      style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                   ),
                 ),

@@ -14,20 +14,20 @@ class NewsModel {
 
 List<NewsModel> news_list = [
   NewsModel(
-      newsTitle: 'Why Road Accidents Occur',
+      newsTitle: 'Why does road acciden happens',
       newsDetails:
-          'Accidents usually take place due to big potholes or damaged roads, lack of soiling, muddy and narrow roads, and the absence of road signs, traffic lights, or speed breakers.',
-      newsImg: 'assets/images/'),
+          'Road accidents occur for a variety of reasons. Often, drivers are distracted while behind the wheel, taking their focus away from the road. ... Sometimes, accidents occur for a combination of reasons, from bad visibility to unsafe road design, or other drivers lack caution.',
+      newsImg: 'assets/images/accident.jpg'),
   NewsModel(
     newsTitle: 'Biggest Road Accident',
     newsDetails:
         'Interstate 35 in San Antonio, Texas, United States, 127 car pile-up caused by blinding glare and rain-slicked roads, 67 injuries.',
-    newsImg: 'assets/images/',
+    newsImg: 'assets/images/big_accident.jpg',
   ),
   NewsModel(
-    newsTitle: 'how many car crashes happen every year',
+    newsTitle: 'Everyday road Accidents',
     newsDetails:
         'According to the National Highway Traffic Administration, car accidents happen every 60 seconds. That equates to about 5.25 million accidents across the nation on a yearly basis.',
-    newsImg: 'assets/images/',
+    newsImg: 'assets/images/daily_accidents.jpg',
   ),
 ];

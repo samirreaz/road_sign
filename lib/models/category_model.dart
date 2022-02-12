@@ -16,14 +16,14 @@ List<CategoryModel> categoris = [
   ),
   CategoryModel(
     categoryName: 'Road Symbols',
-    categoryImg: 'assets/images/',
+    categoryImg: 'assets/images/roadSymbol.jpg',
   ),
   CategoryModel(
-    categoryName: 'Traffic Signals',
-    categoryImg: 'assets/images/',
+    categoryName: 'Important Road Signs',
+    categoryImg: 'assets/images/importan_signs.jpg',
   ),
   CategoryModel(
-    categoryName: 'Notice',
-    categoryImg: 'assets/images/',
+    categoryName: 'Road signals and Safety',
+    categoryImg: 'assets/images/signs_Pedestrians.jpg',
   ),
 ];
