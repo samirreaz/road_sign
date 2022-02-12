@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      endDrawer: Drawer(child: Text('Drawer')),
     );
   }
 }
