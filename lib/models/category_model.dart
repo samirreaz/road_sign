@@ -11,6 +11,7 @@ List<CategoryModel> categoris = [
     categoryImg: 'assets/images/all_lights.png',
   ),
   CategoryModel(
+    categoryName: 'Types of Car',
     categoryName: 'Road Symbols',
     categoryImg: 'assets/images/traffic_stops.png',
   ),

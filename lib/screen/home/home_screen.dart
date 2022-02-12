@@ -45,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(categoris[index].categoryImg),
-                            fit: BoxFit.cover,
+                            fit: BoxFit.contain,
                           ),
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
