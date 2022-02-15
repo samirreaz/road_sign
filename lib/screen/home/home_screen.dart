@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/news_model.dart';
@@ -10,31 +13,167 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('The Home Page'),
-        backgroundColor: Colors.brown[300],
+    var scaffold = Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(90),
+        child: AppBar(
+          title: Text(
+            'Road Signals 🚖',
+            style: TextStyle(fontSize: 28),
+          ),
+          centerTitle: true,
+          backgroundColor: Color(0xffbf360c),
+          elevation: 10,
+          shadowColor: Color(0xff3f51b5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25),
+            ),
+          ),
+        ),
       ),
-      backgroundColor: Colors.white,
+
+      backgroundColor: Color(0xffffbb93),
       //!body
-      body: Column(
+      body: Padding(
+        padding: const EdgeInsets.only(top: 18.0),
+        child: Column(
+          children: [
+            Expanded(
+              flex: 2,
+              //! it's category List
+              child: CategoryWidget(),
+            ),
+
+            //!Second Column Part
+
+            Flexible(
+              flex: 4,
+              //! it's news list.
+              child: NewsListWidget(),
+            ),
+          ],
+        ),
+      ),
+
+      drawer: MyDrawer(),
+
+      // bottomNavigationBar: CurvedNavigationBar();
+    );
+    return scaffold;
+  }
+}
+
+class MyDrawer extends StatelessWidget {
+  const MyDrawer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      backgroundColor: Color(0xffff8a65),
+      child: ListView(
         children: [
-          Expanded(
-            flex: 2,
-            //! it's category List
-            child: CategoryWidget(),
+          DrawerHeader(
+            child: Text('Head'),
+            decoration: BoxDecoration(
+              color: Color(0xffef5350),
+            ),
           ),
-
-          //!Second Column Part
-
-          Flexible(
-            flex: 4,
-            //! it's news list.
-            child: NewsListWidget(),
+          ListTile(
+            title: Text('Types of Vehicles'),
+            leading: Icon(Icons.car_rental),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryScreen(
+                    selectedCategory: categoris[0],
+                  ),
+                ),
+              );
+            },
           ),
+          ListTile(
+            title: Text('Traffic Lights'),
+            leading: Icon(Icons.traffic),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryScreen(
+                    selectedCategory: categoris[1],
+                  ),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Road Sign Encyclopedia'),
+            leading: Icon(Icons.add_road),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryScreen(
+                    selectedCategory: categoris[2],
+                  ),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Street Sings'),
+            leading: Icon(Icons.label_important_outline_rounded),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryScreen(
+                    selectedCategory: categoris[3],
+                  ),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Road Signs and Safety'),
+            leading: Icon(Icons.safety_divider),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CategoryScreen(
+                    selectedCategory: categoris[4],
+                  ),
+                ),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('About'),
+            leading: Icon(Icons.face),
+            trailing: Icon(Icons.arrow_right),
+            onTap: () {},
+          ),
+          IconButton(
+            onPressed: () {
+              exit(0);
+            },
+            iconSize: 50,
+            icon: Icon(Icons.logout_rounded),
+            tooltip: 'Close this App',
+            color: Colors.black,
+          )
         ],
       ),
-      endDrawer: Drawer(child: Text('Drawer')),
     );
   }
 }
@@ -46,78 +185,81 @@ class NewsListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: news_list.length,
-      itemBuilder: (BuildContext context, int index) {
-        return InkWell(
-          onTap: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => NewsScreen(
-                    news: news_list[index],
-                  ),
-                ));
-          },
-          child: Container(
-            height: 200,
-            margin: EdgeInsets.all(8),
-            decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black12, blurRadius: 2, spreadRadius: 2)
-                ]),
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 5,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
-                        ),
-                        image: DecorationImage(
-                            image: AssetImage(news_list[index].newsImg),
-                            fit: BoxFit.fitWidth)),
-                    width: double.maxFinite,
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Padding(
-                    padding: EdgeInsets.all(3),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          news_list[index].newsTitle,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: ListView.separated(
+        itemCount: news_list.length,
+        itemBuilder: (BuildContext context, int index) {
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NewsScreen(
+                      news: news_list[index],
+                    ),
+                  ));
+            },
+            child: Container(
+              height: 200,
+              margin: EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black12, blurRadius: 2, spreadRadius: 2)
+                  ]),
+              child: Column(
+                children: [
+                  Expanded(
+                    flex: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
                           ),
-                        ),
-                        Text(
-                          news_list[index].newsDetails,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
+                          image: DecorationImage(
+                              image: AssetImage(news_list[index].newsImg),
+                              fit: BoxFit.fitWidth)),
+                      width: double.maxFinite,
                     ),
                   ),
-                ),
-              ],
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(3),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            news_list[index].newsTitle,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            ),
+                          ),
+                          Text(
+                            news_list[index].newsDetails,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        );
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return SizedBox(
-          height: 10,
-        );
-      },
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) {
+          return SizedBox(
+            height: 10,
+          );
+        },
+      ),
     );
   }
 }
@@ -130,7 +272,7 @@ class CategoryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.only(bottom: 0.0),
       child: ListView.separated(
         itemCount: categoris.length,
         scrollDirection: Axis.horizontal,
