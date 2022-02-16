@@ -20,20 +20,59 @@ class CategoryScreen extends StatelessWidget {
       }
     }
     return Scaffold(
-      appBar: AppBar(
-        title: Text(selectedCategory.categoryName),
-        backgroundColor: Colors.brown[300],
-      ),
-      body: ListView.builder(
-        itemCount: filterList.length,
-        itemBuilder: (context, index) => ListTile(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(90),
+        child: AppBar(
           title: Text(
-            filterList[index].itemName,
+            selectedCategory.categoryName,
             style: TextStyle(fontSize: 25),
+          ),
+          elevation: 10,
+          shadowColor: Color(0xff3f51b5),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25),
+              bottomRight: Radius.circular(25),
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Color(0xffbf360c),
+        ),
+      ),
+      backgroundColor: Color(0xffffbb93),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 15),
+        child: ListView.builder(
+          shrinkWrap: true,
+          itemCount: filterList.length,
+          itemBuilder: (context, index) => Column(
+            children: [
+              Container(
+                height: 200,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black38, width: 3),
+                  color: Colors.white,
+                  image: DecorationImage(
+                    image: AssetImage(filterList[index].itemImg),
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Text(
+                filterList[index].itemName,
+                style: TextStyle(fontSize: 25),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Text(
+                  filterList[index].details ?? '',
+                  style: TextStyle(fontSize: 15),
+                ),
+              )
+            ],
           ),
         ),
       ),
-      backgroundColor: Colors.white,
     );
   }
 }

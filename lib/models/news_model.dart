@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class NewsModel {
   final String newsTitle;
   final String newsDetails;
@@ -14,10 +12,10 @@ class NewsModel {
 
 List<NewsModel> news_list = [
   NewsModel(
-      newsTitle: 'Why does road acciden happens',
+      newsTitle: 'Why Accident Happens?',
       newsDetails:
           'Road accidents occur for a variety of reasons. Often, drivers are distracted while behind the wheel, taking their focus away from the road. ... Sometimes, accidents occur for a combination of reasons, from bad visibility to unsafe road design, or other drivers lack caution.',
-      newsImg: 'assets/images/accident.jpg'),
+      newsImg: 'assets/images/car-accident-g60a39f616_640.png'),
   NewsModel(
     newsTitle: 'Biggest Road Accident',
     newsDetails:

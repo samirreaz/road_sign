@@ -1,11 +1,10 @@
 import 'dart:io';
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:road_sign/models/category_model.dart';
 import 'package:road_sign/models/news_model.dart';
-import 'package:road_sign/models/quize_model.dart';
 import 'package:road_sign/screen/category/category_screen.dart';
+import 'package:road_sign/screen/extra_screen/about.dart';
 import 'package:road_sign/screen/news/news_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -76,12 +75,6 @@ class MyDrawer extends StatelessWidget {
       backgroundColor: Color(0xffff8a65),
       child: ListView(
         children: [
-          DrawerHeader(
-            child: Text('Head'),
-            decoration: BoxDecoration(
-              color: Color(0xffef5350),
-            ),
-          ),
           ListTile(
             title: Text('Types of Vehicles'),
             leading: Icon(Icons.car_rental),
@@ -161,13 +154,18 @@ class MyDrawer extends StatelessWidget {
             title: Text('About'),
             leading: Icon(Icons.face),
             trailing: Icon(Icons.arrow_right),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => About_App()),
+              );
+            },
           ),
           IconButton(
             onPressed: () {
               exit(0);
             },
-            iconSize: 50,
+            iconSize: 20,
             icon: Icon(Icons.logout_rounded),
             tooltip: 'Close this App',
             color: Colors.black,

@@ -15,23 +15,39 @@ class NewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(news.newsTitle),
-        backgroundColor: Colors.brown[300],
+        title: Text(
+          news.newsTitle,
+          style: TextStyle(fontSize: 25),
+        ),
+        backgroundColor: Color(0xffbf360c),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Image(
-              image: AssetImage(news.newsImg),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                news.newsDetails,
-                style: TextStyle(fontSize: 20),
+      backgroundColor: Color(0xffffbb93),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 15.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage(news.newsImg),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black38, width: 3),
+                    color: Color(0xffffeeff),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      news.newsDetails,
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

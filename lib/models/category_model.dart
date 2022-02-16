@@ -15,7 +15,7 @@ List<CategoryModel> categoris = [
     categoryImg: 'assets/images/allLights.jpg',
   ),
   CategoryModel(
-    categoryName: 'Road Symbols',
+    categoryName: 'Road Sign Encyclopedia',
     categoryImg: 'assets/images/roadSymbol.jpg',
   ),
   CategoryModel(
@@ -23,7 +23,7 @@ List<CategoryModel> categoris = [
     categoryImg: 'assets/images/importan_signs.jpg',
   ),
   CategoryModel(
-    categoryName: 'Road signals and Safety',
+    categoryName: 'Road Signs and Safety',
     categoryImg: 'assets/images/signs_Pedestrians.jpg',
   ),
 ];

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:road_sign/screen/home/home_screen.dart';
+import 'package:road_sign/screen/loadingScreen/loadingPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Road Sign',
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
+        primarySwatch: Colors.red,
       ),
-      home: HomeScreen(),
+      home: LoadingPage(),
     );
   }
 }
