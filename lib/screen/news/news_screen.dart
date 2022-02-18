@@ -19,23 +19,26 @@ class NewsScreen extends StatelessWidget {
           news.newsTitle,
           style: TextStyle(fontSize: 25),
         ),
-        backgroundColor: Color(0xffbf360c),
+        backgroundColor: Color(0xff3f51b5),
       ),
-      backgroundColor: Color(0xffffbb93),
+      backgroundColor: Color(0xffc5cae9),
       body: Padding(
         padding: const EdgeInsets.only(top: 15.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image(
-                image: AssetImage(news.newsImg),
+              Padding(
+                padding: const EdgeInsets.only(top: 28.0),
+                child: Image(
+                  image: AssetImage(news.newsImg),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black38, width: 3),
-                    color: Color(0xffffeeff),
+                    color: Color(0xffe2f1f8),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),

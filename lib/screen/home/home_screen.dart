@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
             style: TextStyle(fontSize: 28),
           ),
           centerTitle: true,
-          backgroundColor: Color(0xffbf360c),
+          backgroundColor: Color(0xff3f51b5),
           elevation: 10,
           shadowColor: Color(0xff3f51b5),
           shape: RoundedRectangleBorder(
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      backgroundColor: Color(0xffffbb93),
+      backgroundColor: Color(0xffc5cae9),
       //!body
       body: Padding(
         padding: const EdgeInsets.only(top: 18.0),
@@ -64,6 +64,8 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+var textStyle = TextStyle(color: Colors.black, fontSize: 18);
+
 class MyDrawer extends StatelessWidget {
   const MyDrawer({
     Key? key,
@@ -72,105 +74,141 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Color(0xffff8a65),
-      child: ListView(
-        children: [
-          ListTile(
-            title: Text('Types of Vehicles'),
-            leading: Icon(Icons.car_rental),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryScreen(
-                    selectedCategory: categoris[0],
+      backgroundColor: Color(0xffefebe9),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 30.0),
+        child: ListView(
+          children: [
+            ListTile(
+              title: Text(
+                'Types of Vehicles',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.car_rental),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 34,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(
+                      selectedCategory: categoris[0],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Traffic Lights'),
-            leading: Icon(Icons.traffic),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryScreen(
-                    selectedCategory: categoris[1],
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Traffic Lights',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.traffic),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 34,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(
+                      selectedCategory: categoris[1],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Road Sign Encyclopedia'),
-            leading: Icon(Icons.add_road),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryScreen(
-                    selectedCategory: categoris[2],
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Road Sign Encyclopedia',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.add_road),
+              trailing: Icon(Icons.arrow_right, size: 34),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(
+                      selectedCategory: categoris[2],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Street Sings'),
-            leading: Icon(Icons.label_important_outline_rounded),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryScreen(
-                    selectedCategory: categoris[3],
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Street Signs',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.label_important_outline_rounded),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 34,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(
+                      selectedCategory: categoris[3],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Road Signs and Safety'),
-            leading: Icon(Icons.safety_divider),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CategoryScreen(
-                    selectedCategory: categoris[4],
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
+                'Road Signs and Safety',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.safety_divider),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 34,
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CategoryScreen(
+                      selectedCategory: categoris[4],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('About'),
-            leading: Icon(Icons.face),
-            trailing: Icon(Icons.arrow_right),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => About_App()),
-              );
-            },
-          ),
-          IconButton(
-            onPressed: () {
-              exit(0);
-            },
-            iconSize: 20,
-            icon: Icon(Icons.logout_rounded),
-            tooltip: 'Close this App',
-            color: Colors.black,
-          )
-        ],
+                );
+              },
+            ),
+            ListTile(
+              title: Text(
+                'About',
+                style: textStyle,
+              ),
+              leading: Icon(Icons.face),
+              trailing: Icon(
+                Icons.arrow_right,
+                size: 34,
+              ),
+              onTap: () async {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: await (context) => About_App()),
+                );
+              },
+            ),
+            IconButton(
+              onPressed: () {
+                exit(0);
+              },
+              iconSize: 45,
+              icon: Icon(Icons.logout_rounded),
+              tooltip: 'Close this App',
+              color: Colors.black,
+            )
+          ],
+        ),
       ),
     );
   }
@@ -206,7 +244,7 @@ class NewsListWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.black12, blurRadius: 2, spreadRadius: 2)
+                        color: Colors.black12, blurRadius: 5, spreadRadius: 5)
                   ]),
               child: Column(
                 children: [
