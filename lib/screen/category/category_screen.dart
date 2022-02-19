@@ -90,9 +90,9 @@ class CategoryScreen extends StatelessWidget {
                   ),
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black38, width: 3),
-                  borderRadius: BorderRadius.circular(20),
-                ),
+                    border: Border.all(color: Colors.black38, width: 3),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.white),
               )
             ],
           ),

@@ -12,7 +12,7 @@ class About_App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xff546e7a),
+        backgroundColor: Color(0xff1b1b1b),
         body: ListView(
           children: [
             Container(
@@ -24,11 +24,29 @@ class About_App extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: 35.0),
-                    child: CircleAvatar(
-                      maxRadius: 120,
-                      backgroundImage: NetworkImage(
-                          'https://media-exp1.licdn.com/dms/image/C5603AQEzw6Dk3IPgHA/profile-displayphoto-shrink_800_800/0/1608714667178?e=1650499200&v=beta&t=LOwP7T4YXz7as8iYcmzjrtdBcAVMBUN5hGSkSgSDl-8'),
+
+                    child: Container(
+                      width: 200.0,
+                      height: 200.0,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff7c94b6),
+                        image: DecorationImage(
+                          image: NetworkImage(
+                              'https://media-exp1.licdn.com/dms/image/C5603AQEzw6Dk3IPgHA/profile-displayphoto-shrink_800_800/0/1608714667178?e=1650499200&v=beta&t=LOwP7T4YXz7as8iYcmzjrtdBcAVMBUN5hGSkSgSDl-8'),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(95.0)),
+                        border: Border.all(
+                          color: Color(0xFFe0e0e0),
+                          width: 4.0,
+                        ),
+                      ),
                     ),
+                    // child: CircleAvatar(
+                    //   maxRadius: 120,
+                    //   backgroundImage: NetworkImage(
+                    //       'https://media-exp1.licdn.com/dms/image/C5603AQEzw6Dk3IPgHA/profile-displayphoto-shrink_800_800/0/1608714667178?e=1650499200&v=beta&t=LOwP7T4YXz7as8iYcmzjrtdBcAVMBUN5hGSkSgSDl-8'),
+                    // ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 18.0),

@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
 
-      drawer: MyDrawer(),
+      endDrawer: MyDrawer(),
 
       // bottomNavigationBar: CurvedNavigationBar();
     );
